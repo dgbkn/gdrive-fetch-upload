@@ -66,7 +66,7 @@ module.exports.getFileStream = (fileId, opts = {}) => {
 
     return new Promise((resolve, reject) => {
       drive.files.get(
-        { fileId, alt: "media" }, { responseType: "stream", ...opts },
+        { fileId, alt: "media" }, { responseType: "stream"},
         (err, res) => (err ? reject(err) : resolve(res))
       ); // prettier-ignore
     });
